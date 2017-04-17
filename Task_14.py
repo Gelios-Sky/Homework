@@ -1,9 +1,8 @@
 x=int(input('Enter your number'))
-if x%2>0:
-    print("Not even")
+if x%2==0:
+    print('Even')
 else:
-    print("Even")
-
+    print("Not even")
 
 
 
