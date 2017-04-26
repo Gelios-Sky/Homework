@@ -2,19 +2,23 @@ print("Введите коэффициенты для квадратного у�
 a = float(input("a = "))
 b = float(input("b = "))
 c = float(input("c = "))
-
 discr = b ** 2 - 4 * a * c
 print("Дискриминант=", discr)
-if discr > 0:
+def equation(a,b,):
     import math
     x1 = (-b + math.sqrt(discr)) / (2 * a)
     x2 = (-b - math.sqrt(discr)) / (2 * a)
-    print(x1, x2)
-elif discr == 0:
+    return (x1,x2)
+def equation_2(a,b,):
     x = -b / (2 * a)
-    print("x=",x)
+    print("x=", x)
+if discr > 0:
+    print(equation(a,b,))
+elif discr == 0:
+    print(equation_2(a,b,))
 else:
     print("Корней нет")
+
 
 
 
