@@ -2,24 +2,18 @@ print("Введите коэффициенты для квадратного у�
 a = float(input("a = "))
 b = float(input("b = "))
 c = float(input("c = "))
-discr = b ** 2 - 4 * a * c
-print("Дискриминант=", discr)
-def equation(a,b,):
-    import math
-    x1 = (-b + math.sqrt(discr)) / (2 * a)
-    x2 = (-b - math.sqrt(discr)) / (2 * a)
-    return (x1,x2)
-def equation_2(a,b,):
-    x = -b / (2 * a)
-    print("x=", x)
-if discr > 0:
-    print(equation(a,b,))
-elif discr == 0:
-    print(equation_2(a,b,))
-else:
-    print("Корней нет")
+def quadratic_equation(a, b, c):
+    discr = b ** 2 - 4 * a * c
+    if discr > 0:
+        import math
+        x1 = (-b + math.sqrt(discr)) / (2 * a)
+        x2 = (-b - math.sqrt(discr)) / (2 * a)
+        return ("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+    elif discr == 0:
+        x = -b / (2 * a)
+        return ("x = %.2f" % x)
+    else:
+        return ("Корней нет")
 
-
-
-
+print (quadratic_equation(a,b,c))
 
